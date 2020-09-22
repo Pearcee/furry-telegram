@@ -1,8 +1,15 @@
 https://code.visualstudio.com/docs/python/tutorial-django
 
-
+# wsl2
 python3 -m venv env
 source env/bin/activate
+
+# windows 
+python -m venv env
+Set-ExecutionPolicy RemoteSigned
+.\env\Scripts\Activate.ps1
+
+
 python -m pip install --upgrade pip
 
 python -m pip install django
@@ -10,9 +17,10 @@ django-admin startproject site .
 python manage.py runserver
 python manage.py startapp hello
 
-
-
-
+./manage.py makemigrations
+./manage.py migrate
+./manage.py createsuperuser
+./manage.py runserver
 
 
 #
