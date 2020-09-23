@@ -1,5 +1,21 @@
 @import "reset";
 @import "colors";
+@import "button";
+@import "nav";
+@import "footer";
+
+/* Define mixin with two arguments */
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px);  // Call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // Call mixin with two values
+}
 
 body {
   font-family: Helvetica, sans-serif;
@@ -7,18 +23,3 @@ body {
   color: $myBlue;
 }
 
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  li {
-    display: inline-block;
-  }
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
-}
