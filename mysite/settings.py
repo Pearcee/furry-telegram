@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=a_wx9kps6d#gd=9el=@0j2=j4s#f&=%e!z4uad88^^)pg*n74'
+SECRET_KEY = '=a_wx9kps6d#gd=9el=@0j2=j4s#f&=%e!z4uad88^^)pg*n7487666jbmn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'page.apps.PageConfig',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -120,4 +121,40 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+    PWA_APP_DEBUG_MODE = True
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+PWA_APP_NAME = 'My App' 
+PWA_APP_DESCRIPTION = "My app description" 
+PWA_APP_THEME_COLOR = '#0A0302' 
+PWA_APP_BACKGROUND_COLOR = '#ffffff' 
+PWA_APP_DISPLAY = 'standalone' 
+PWA_APP_SCOPE = '/' 
+PWA_APP_ORIENTATION = 'any' 
+PWA_APP_START_URL = '/' 
+PWA_APP_STATUS_BAR_COLOR = 'default' 
+PWA_APP_ICONS = [ { 'src': '/static/images/icons/192.png', 'sizes': '192x192', "type": "image/png", 'purpose': 'any maskable' },
+                  { 'src': '/static/images/icons/512.png', 'sizes': '512x512', "type": "image/png", 'purpose': 'any maskable' } ] 
+PWA_APP_ICONS_APPLE = [ { 'src': '/static/images/icons/192.png', 'sizes': '192x192', "type": "image/png", } ] 
+PWA_APP_SPLASH_SCREEN = [ { 'src': '/static/images/icons/192.png', 'sizes': '192x192' , 
+                            'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)' } ] 
+PWA_APP_DIR = 'ltr' 
+PWA_APP_LANG = 'en-UK'   
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'page', 'serviceworker.js')
+
+""" 
+    {
+      "src": "path/to/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+
+
+ """

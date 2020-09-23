@@ -3,6 +3,14 @@ from django.db import models
 from django.utils import timezone
 
 
+# Create your models here.
+class Feed(models.Model):
+	id=models.IntegerField(primary_key=True)
+	author=models.CharField(max_length=50)
+	title=models.CharField(max_length=100)
+	body=models.TextField()
+
+
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
