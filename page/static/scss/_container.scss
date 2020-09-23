@@ -1,0 +1,21 @@
+
+/* The grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header   header  header  header  header  header' 
+      'main     main    main    main    main    main' 
+      'footer   footer  footer  footer  footer  footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  /* Style the main column */
+  .main {
+    grid-area: main;
+  }
+  
+  /* Style the footer */
+  .footer {
+    grid-area: footer;
+  }
+  

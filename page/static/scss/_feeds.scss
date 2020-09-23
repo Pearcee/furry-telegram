@@ -1,0 +1,10 @@
+.feeds {
+    display: grid;
+    grid-template-columns: 80px 200px auto 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .feeds {
+      grid-template-columns: auto;
+    }
+  }

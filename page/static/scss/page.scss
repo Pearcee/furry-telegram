@@ -3,6 +3,10 @@
 @import "button";
 @import "nav";
 @import "footer";
+@import "feeds";
+@import "container";
+
+
 
 /* Define mixin with two arguments */
 @mixin bordered($color, $width) {

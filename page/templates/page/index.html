@@ -1,17 +1,16 @@
 {% extends 'page/base.html' %}
 {% block content %}
 {% load static %}
-<br><br><br>
-<div class="feeds">
+
 	{% for result in results %}
-		<h3>{{result.title}}</h3>
-		<br>
-		Name:{{result.author}}
-		<br>
-		<p id="{{result.id}}">
-			{{result.body}}
-		</p>
-		<hr>
+	<br>
+		<div class="feeds">
+			<div>{{result.author}}</div>
+			<div>{{result.title}}</div>  
+			<div>{{result.body}}</div>
+		</div>
 	{% endfor %}
-</div>
+	<br>
+	<br>
+
 {% endblock %}

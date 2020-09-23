@@ -11,14 +11,15 @@
 		<link rel="stylesheet" href="{% static 'css/page.min.css' %}">
 	</head>
 	<body>
-		<div class="wrapper">
-			{% include 'page/nav.html' with brand_name=brand_name %}
-
-			<div id="content" class="container">
-				{% block content %}
-				{% endblock %}
+		<div class="grid-container">
+			<div class="header">
+				{% include 'page/nav.html' with brand_name=brand_name %}
 			</div>
-
+			<br>
+			<div class="main">			
+				{% block content %}
+				{% endblock %}			
+			</div>
 			<div class="footer">
 				<p>Footer</p>
 			</div>

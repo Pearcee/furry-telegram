@@ -1,47 +1,26 @@
 /* Style the topnav links */
 .topnav {
-  overflow: hidden;
-  background-color: #777777;
+    background-color: $textcolor;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-  a {
-    float: left;
-    color: #f2f2f2;
-
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-
-    &:hover {
-        background-color: $navbackgroundcolor;
-        color: black;
-    }
-
-    .active {
-        background-color: $navbackgroundcolor;
-        color: white;
-    }
-  }
-}
-
-
-
-/*
-.topnav {
     a {
-        float: left;
-        display: block;
         color: #f2f2f2;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        font-size: 17px;
 
-        /* Change color on hover 
         &:hover {
-            background-color: #ddd;
+            background-color: $navbackgroundcolor;
             color: black;
+        }
+
+        .active {
+            background-color: $navbackgroundcolor;
+            color: white;
         }
     }
 }
 
-*/
