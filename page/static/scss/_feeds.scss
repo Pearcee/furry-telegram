@@ -1,6 +1,12 @@
 .feeds {
     display: grid;
-    grid-template-columns: 80px 200px auto 30px;
+    grid-template-columns: 70px 100px auto ;
+    grid-gap: 1px;
+    padding: 11px;
+    background-color: $bgcolor;
+    color: $textcolor;
+    text-align: justify;
+    grid-gap: 1px;
 }
 
 @media only screen and (max-width: 600px) {

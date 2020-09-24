@@ -1,7 +1,12 @@
 {% extends 'page/base.html' %}
 {% block content %}
 {% load static %}
-
+	<br>
+	<div class="feeds">
+		<div>Author</div>
+		<div>Title</div>  
+		<div>Body</div>
+	</div>
 	{% for result in results %}
 	<br>
 		<div class="feeds">
@@ -10,7 +15,5 @@
 			<div>{{result.body}}</div>
 		</div>
 	{% endfor %}
-	<br>
-	<br>
-
+	<br><br><br>
 {% endblock %}

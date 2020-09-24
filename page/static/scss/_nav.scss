@@ -1,12 +1,14 @@
 /* Style the topnav links */
 .topnav {
-    background-color: $textcolor;
+    background-color: $bgcolor;
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 14px 16px;
 
     a {
-        color: #f2f2f2;
+        background-color: $bgcolor;
+        color: $textcolor;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;

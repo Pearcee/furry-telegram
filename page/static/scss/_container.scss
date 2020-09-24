@@ -7,11 +7,13 @@
       'main     main    main    main    main    main' 
       'footer   footer  footer  footer  footer  footer';
     /* grid-column-gap: 10px; - if you want gap between the columns */
+
   } 
   
   /* Style the main column */
   .main {
     grid-area: main;
+    background-color: black;
   }
   
   /* Style the footer */
