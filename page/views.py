@@ -22,3 +22,15 @@ def base_layout(request):
 # Create your views here.
 def post_list(request):
     return render(request, 'page/index.html', {})
+
+def about(request):
+	template='page/about.html'
+	return render(request,template)
+
+def contact(request):
+	template='page/contact.html'
+	return render(request,template)	
+
+def news(request):
+	template='page/news.html'
+	return render(request,template)
