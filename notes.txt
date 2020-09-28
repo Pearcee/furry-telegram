@@ -1,6 +1,8 @@
 https://code.visualstudio.com/docs/python/tutorial-django
 
 # wsl2
+run apt-get update
+sudo apt-get install python3-venv
 python3 -m venv env
 source env/bin/activate
 
