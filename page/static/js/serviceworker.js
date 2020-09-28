@@ -1,4 +1,4 @@
-var staticCacheName = "djangopwa-v3";
+var staticCacheName = "djangopwa-v0928";
 
 self.addEventListener("install", function(event) {
   event.waitUntil(

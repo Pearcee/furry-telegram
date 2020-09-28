@@ -146,7 +146,7 @@ PWA_APP_SPLASH_SCREEN = [ { 'src': '/static/images/icons/192.png', 'sizes': '192
 PWA_APP_DIR = 'ltr' 
 PWA_APP_LANG = 'en-UK'   
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'page', 'serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'page/static/js', 'serviceworker.js')
 
 """ 
     {

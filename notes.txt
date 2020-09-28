@@ -55,40 +55,6 @@ pip install -r requirements.txt
 source env/bin/activate
 
 
-        <div class="grid-container">
-        <div class="header">
-            <h2>Header</h2>
-        </div>
-        
-        <div class="left" style="background-color:#aaa;">Column</div>
-        <div class="middle" style="background-color:#bbb;">Column</div>  
-        <div class="right" style="background-color:#ccc;">Column</div>
-        
-        <div class="footer">
-            <p>Footer</p>
-        </div>
-        </div>
-
-		<div class="wrapper">
-			{% include 'page/nav.html' with brand_name=brand_name %}
-
-			<div id="content" class="container">
-				{% block content %}
-				{% endblock %}
-			</div>
-
-			<div class="footer">
-				<p>Footer</p>
-			</div>
-		</div>
-
-                
-		<br>
-			Name:{{result.author}}
-		<br>
-		<h3>{{result.title}}</h3>
-		
-		<p id="{{result.id}}">
-			{{result.body}}
-		</p>
-		<hr>
+sudo apt-get install python-certbot-apache -y
+sudo apt-get install certbot -y
+certbot --apache
