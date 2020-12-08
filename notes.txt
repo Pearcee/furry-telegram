@@ -1,5 +1,9 @@
 https://code.visualstudio.com/docs/python/tutorial-django
 
+https://github.com/Pearcee/furry-telegram.git
+
+git pull origin master
+
 # wsl2
 run apt-get update
 sudo apt-get install python3-venv
@@ -13,6 +17,8 @@ Set-ExecutionPolicy RemoteSigned
 
 
 python -m pip install --upgrade pip
+pip install -r requirements.txt
+
 
 python -m pip install django
 django-admin startproject site .
@@ -64,6 +70,8 @@ sudo apt-get install apache2-dev -y
 sudo apt-get install apache2-mpm-worker -y
 sudo apt-get install libapache2-mod-wsgi-py3 
 
+sudo nano /etc/apache2/sites-available/000-default.conf 
+cp 000-default.conf /etc/apache2/sites-available/000-default.conf
 <Directory /www/furry-telegram>
     <Files wsgi.py>
         Require all granted
