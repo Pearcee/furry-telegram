@@ -1,0 +1,156 @@
+/* Define standard variables and values for website */
+/* Use the variables */
+body {
+  background-color: black;
+  color: lightgreen;
+  font-size: 18px;
+}
+
+.content {
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family: "Courier New", Courier, monospace, cursive;
+  font-weight: 500;
+  color: lightgreen;
+  text-align: justify;
+}
+
+/*old*/
+h1, h2, h3, h4 {
+  font-family: "Courier New", Courier, monospace, cursive;
+}
+
+.date {
+  color: lightgreen;
+  font-size: 18px;
+}
+
+.save {
+  float: right;
+}
+
+.post-form textarea, .post-form input {
+  width: 99%;
+}
+
+.post {
+  margin-bottom: 70px;
+}
+
+.post h1 a {
+  color: #000000;
+}
+
+.post h1 a:visited {
+  color: #000000;
+}
+
+.message {
+  font-weight: 600;
+  color: blue;
+}
+
+/* skip-link*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*  */
+.comment {
+  margin: 10px 0px 10px 10px;
+}
+
+/* Nav bar */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul.topnav li a.active {
+  background-color: darkslategray;
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li {
+    float: none;
+  }
+  ul.topnav li.right {
+    float: none;
+  }
+}
+
+input[type=text], select {
+  width: 99%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+a {
+  background-color: black;
+  color: red;
+  font-size: 18px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}

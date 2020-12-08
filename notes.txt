@@ -58,3 +58,27 @@ source env/bin/activate
 sudo apt-get install python-certbot-apache -y
 sudo apt-get install certbot -y
 certbot --apache
+
+# apache
+sudo apt-get install apache2-dev -y
+sudo apt-get install apache2-mpm-worker -y
+sudo apt-get install libapache2-mod-wsgi-py3 
+
+<Directory /www/furry-telegram>
+    <Files wsgi.py>
+        Require all granted
+    </Files>
+</Directory>
+ 
+WSGIDaemonProcess WebServer python-path=/www/furry-telegram python-home=/www/furry-telegram/env
+WSGIProcessGroup WebServer
+WSGIScriptAlias / /www/furry-telegram/mysite/wsgi.py
+
+
+
+chmod g+w /www/furry-telegram/db.sqlite3
+chmod g+w /www/furry-telegram
+sudo chown :www-data /www/furry-telegram db.sqlite3
+sudo chown :www-data /www/furry-telegram
+
+sudo service apache2 restart

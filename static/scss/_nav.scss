@@ -1,0 +1,28 @@
+/* Style the topnav links */
+.topnav {
+    background-color: $bgcolor;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 16px;
+
+    a {
+        background-color: $bgcolor;
+        color: $textcolor;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+
+        &:hover {
+            background-color: $navbackgroundcolor;
+            color: black;
+        }
+
+        .active {
+            background-color: $navbackgroundcolor;
+            color: white;
+        }
+    }
+}
+

@@ -27,7 +27,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1', '.pythonanywhere.com','192.168.164','*']
+ALLOWED_HOSTS = ['localhost','127.0.0.1', '.pythonanywhere.com','192.168.164', '192.168.1.217','p6','*']
 
 
 # Application definition
@@ -122,13 +122,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'page/static'),)
+
 if DEBUG:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static')
-    ]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     PWA_APP_DEBUG_MODE = True
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/www/static/'
+
 
 PWA_APP_NAME = 'My App' 
 PWA_APP_DESCRIPTION = "My app description" 
@@ -147,7 +149,7 @@ PWA_APP_SPLASH_SCREEN = [ { 'src': '/static/images/icons/192.png', 'sizes': '192
 PWA_APP_DIR = 'ltr' 
 PWA_APP_LANG = 'en-UK'   
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'page/static/js', 'serviceworker.js')
+#PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, '/static/js', 'serviceworker.js')
 
 """ 
     {
