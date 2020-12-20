@@ -90,3 +90,9 @@ sudo chown :www-data /www/furry-telegram db.sqlite3
 sudo chown :www-data /www/furry-telegram
 
 sudo service apache2 restart
+
+sudo apt install postgresql
+
+pip uninstall psycopg2
+pip uninstall psycopg2-binary
+pip   install psycopg2-binary
