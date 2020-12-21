@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('page.urls')),
     path('', include('pwa.urls')),
+    path('sensor', include('temprature.urls')),
 
 ]
