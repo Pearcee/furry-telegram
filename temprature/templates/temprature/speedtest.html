@@ -1,0 +1,22 @@
+{% extends 'temprature/base.html' %}
+{% block content %}
+{% load static %}
+	<h1>Home Page</h1>
+	<br>
+	<div class="feeds">
+		<div>Temp</div>
+		<div>Humidity</div>  
+		<div>Date</div>
+		<div>Remark</div>
+	</div>
+	{% for result in results %}
+	<br>
+		<div class="feeds">
+			<div>{{result.temp}}</div>
+			<div>{{result.humidity}}</div>  
+			<div>{{result.date}}</div>
+			<div>{{result.remark}}</div>
+		</div>
+	{% endfor %}
+	<br><br><br>
+{% endblock %}
